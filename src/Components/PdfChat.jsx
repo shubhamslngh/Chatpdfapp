@@ -41,11 +41,11 @@ function PdfChat() {
 
   return (
     <div
-      className="w-full px-5 flex flex-col justify-between"
+      className="w-full h-fit px-5 flex flex-col justify-between"
       style={{ height: "100vh" }}
     >
       <div
-        className="container mx-auto flex-grow p-5 bg-white  rounded-lg overflow-y-scroll"
+        className="container mx-auto mt-5 flex-grow p-5 bg-white  rounded-lg overflow-y-scroll"
         ref={chatContainerRef}
       >
         {chatMessages.map((msg, index) => (
