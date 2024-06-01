@@ -16,9 +16,12 @@ function PdfChat() {
     setChatMessages([...chatMessages, newMessage]);
 
     try {
-      const res = await axios.post("http://localhost:8000/ask/", {
-        query: question,
-      });
+      const res = await axios.post(
+        "https://chatapp-hvwpc7fleq-el.a.run.app/ask/",
+        {
+          query: question,
+        }
+      );
       const botMessage = { message: res.data.response, isUser: false };
       setChatMessages([...chatMessages, newMessage, botMessage]);
     } catch (error) {
